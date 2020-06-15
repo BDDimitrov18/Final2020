@@ -35,19 +35,19 @@ public class PlayerInput : MonoBehaviour
 
         if (facing == "right")
         {
-            gridPos.x += 1;
+            gridPos.x += 2;
         }
         else if (facing == "left")
         {
-            gridPos.x -= 1;
+            gridPos.x -= 2;
         }
         else if (facing == "up")
         {
-            gridPos.y += 1;
+            gridPos.y += 2;
         }
         else if (facing == "down")
         {
-            gridPos.y -= 1;
+            gridPos.y -= 2;
         }
         selector.transform.position = gridPos;
     }
