@@ -6,6 +6,10 @@ public class SelectorProperties : MonoBehaviour
 {
     public GameObject crop;
     public GameObject selected;
+    public GameObject SelectCropUi;
+    private bool openedUi;
+
+    public PlayerInput movement;
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Tile")
@@ -26,11 +30,26 @@ public class SelectorProperties : MonoBehaviour
     private void Update()
     {
         if(Input.GetKeyDown("e"))
-        {
+        {          
             if (selected.gameObject.GetComponent<GridElement>().holder == null)
             {
-                selected.gameObject.GetComponent<GridElement>().holder = crop;
+                if(openedUi)
+                {
+                    openedUi = false;
+                    SelectCropUi.SetActive(false);
+                    return;
+                }
+                SelectCropUi.SetActive(true);
+                openedUi = true;
             }
+        }
+        if (openedUi)
+        {
+            movement.allowMovement = false;
+        }
+        else
+        {
+            movement.allowMovement = true;
         }
     }
 }
