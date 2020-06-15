@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GridElement : MonoBehaviour
-{
-
+{ 
     public Vector2 gridPos;
     public GameObject holder;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public bool isSpawned;
+    private void Update()
     {
-        Debug.Log("Joined " + gameObject.name);
+        if (holder != null && !isSpawned)
+        {
+            isSpawned = true;
+            Instantiate(holder,transform);
+        }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnDisSpawnElement(GameObject obj)
     {
-        Debug.Log("Left " + gameObject.name);
+        Destroy(obj);
     }
 }

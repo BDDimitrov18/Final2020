@@ -31,6 +31,6 @@ public class GirdManager : MonoBehaviour
         }
         float gridW = cols * tileSize;
         float gridH = rows * tileSize;
-        transform.position = new Vector2(-gridW / 2 + tileSize / 2,gridH / 2 - tileSize / 2);
+        transform.position = new Vector2(-gridW / 2 + tileSize / 2 + 0.5f,gridH / 2 - tileSize / 2 + 0.5f);
     }
 }

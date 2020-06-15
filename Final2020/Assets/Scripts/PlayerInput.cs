@@ -50,10 +50,17 @@ public class PlayerInput : MonoBehaviour
             gridPos.y -= 1;
         }
         selector.transform.position = gridPos;
+
+        if (Input.GetKeyDown("E"))
+        { 
+            
+        }
     }
 
     private void FixedUpdate()
     {
         mov.Move(x, y);
     }
+
+    
 }
