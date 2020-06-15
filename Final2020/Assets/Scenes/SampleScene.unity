@@ -395,6 +395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef40004393760b47b2b8f6f7969c37f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crop: {fileID: 9041965444393742662, guid: 3237f79c92174904cbb7a020cd41c0d8, type: 3}
+  selected: {fileID: 0}
 --- !u!61 &1441720651
 BoxCollider2D:
   m_ObjectHideFlags: 0

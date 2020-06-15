@@ -51,10 +51,6 @@ public class PlayerInput : MonoBehaviour
         }
         selector.transform.position = gridPos;
 
-        if (Input.GetKeyDown("E"))
-        { 
-            
-        }
     }
 
     private void FixedUpdate()

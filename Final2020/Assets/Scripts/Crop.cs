@@ -6,6 +6,8 @@ using UnityEngine;
 public class Crop : ScriptableObject
 {
     public string type;
-    public Sprite tex;
+    public Sprite[] tex;
     public int growthState;
+    public float growthTime;
+    public bool done = false;
 }
