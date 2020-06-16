@@ -5,6 +5,8 @@ using UnityEngine;
 public class ItemSlotScript : MonoBehaviour
 {
     public bool isHovered;
+    public OnHoverUi ui;
+    public SelectorProperties sp;
     Animator anim;
     public GameObject crop;
     public GameObject selectedElement;
@@ -23,7 +25,10 @@ public class ItemSlotScript : MonoBehaviour
         {
             if (Input.GetKeyDown("e"))
             {
-                selectedElement.GetComponent<GridElement>().holder = crop;
+                if(ui.selectedID!=0)
+                {
+                    selectedElement.GetComponent<GridElement>().holder = crop;
+                }
             }
         }
     }
