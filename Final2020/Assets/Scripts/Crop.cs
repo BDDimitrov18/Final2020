@@ -11,4 +11,5 @@ public class Crop : ScriptableObject
     public float growthTime;
     public bool done = false;
     public float price = Random.Range(100,300);
+    public int count;
 }
