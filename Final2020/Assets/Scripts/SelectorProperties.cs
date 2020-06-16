@@ -7,7 +7,7 @@ public class SelectorProperties : MonoBehaviour
     public GameObject crop;
     public GameObject selected;
     public GameObject SelectCropUi;
-    private bool openedUi;
+    public bool openedUi;
 
     public PlayerInput movement;
     public void OnTriggerEnter2D(Collider2D collision)
