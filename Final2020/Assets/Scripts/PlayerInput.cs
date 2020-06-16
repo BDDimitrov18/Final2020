@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    public Camera cam;
     public float x, y; 
     public float Speed = 3f;
     public PlayerMovement mov;
@@ -11,6 +12,7 @@ public class PlayerInput : MonoBehaviour
     public GameObject selector;
     public Vector2 gridPos;
     public bool allowMovement = true;
+    public float scroll;
     private void Update()
     {
         if (allowMovement)
@@ -59,6 +61,9 @@ public class PlayerInput : MonoBehaviour
             x = 0;
             y = 0;
         }
+
+        scroll = Input.GetAxis("Mouse ScrollWheel");
+        Camera.main.orthographicSize -= scroll*5;
     }
 
     private void FixedUpdate()
