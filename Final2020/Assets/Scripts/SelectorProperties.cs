@@ -27,21 +27,19 @@ public class SelectorProperties : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        if(Input.GetKeyDown("e"))
-        {          
-            if (selected.gameObject.GetComponent<GridElement>().holder == null)
+        if (Input.GetKeyDown("e"))
+        {
+            if (openedUi)
             {
-                if(openedUi)
-                {
-                    openedUi = false;
-                    SelectCropUi.SetActive(false);
-                    return;
-                }
-                SelectCropUi.SetActive(true);
-                openedUi = true;
+                openedUi = false;
+                SelectCropUi.SetActive(false);
+                return;
             }
+            SelectCropUi.SetActive(true);
+            openedUi = true;
+
         }
         if (openedUi)
         {

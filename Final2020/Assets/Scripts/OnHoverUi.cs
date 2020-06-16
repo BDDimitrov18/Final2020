@@ -43,9 +43,9 @@ public class OnHoverUi : MonoBehaviour
         {
             selectedID = 0;
         }
-        if (selectedID > itemSlots.Count)
+        if (selectedID > itemSlots.Count-1)
         {
-            selectedID = itemSlots.Count;
+            selectedID = itemSlots.Count-1;
         }
         if (lastSelectedId != selectedID)
         {

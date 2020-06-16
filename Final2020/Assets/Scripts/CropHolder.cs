@@ -5,29 +5,32 @@ using UnityEngine;
 
 public class CropHolder : MonoBehaviour
 {
-    public Crop crop;
+    public string type;
+    public Sprite[] tex;
+    public int growthState;
+    public float growthTime;
+    public bool done = false;
     SpriteRenderer rend;
     private void Start()
     {
         rend = gameObject.GetComponent<SpriteRenderer>();
-        crop.growthState = 0;
-        rend.sprite = crop.tex[crop.growthState];
-        crop.growthTime = Mathf.Round(Random.Range(10f, 45f));
+        growthState = 0;
+        rend.sprite = tex[growthState];
+        growthTime = Mathf.Round(Random.Range(10f, 20f));
     }
 
     private void Update()
     {
-        crop.growthTime -= Time.deltaTime;
-        if (crop.growthTime <= 0 && crop.growthState != crop.tex.Length-1)
+        growthTime -= Time.deltaTime;
+        if (growthTime <= 0 && growthState != tex.Length-1)
         {
-            crop.growthState++;
-            rend.sprite = crop.tex[crop.growthState];
-            crop.growthTime = Mathf.Round(Random.Range(10f, 20f));
+            growthState++;
+            growthTime = Mathf.Round(Random.Range(10f, 20f));
         }
-
-        if(crop.growthState == crop.tex.Length-1)
+        rend.sprite = tex[growthState];
+        if (growthState == tex.Length-1)
         {
-            crop.done = false;
+            done = false;
         }
     }
 }

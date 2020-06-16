@@ -6,6 +6,9 @@ public class ItemSlotScript : MonoBehaviour
 {
     public bool isHovered;
     Animator anim;
+    public GameObject crop;
+    public GameObject selectedElement;
+    public SelectorProperties props;
 
     private void Start()
     {
@@ -14,12 +17,13 @@ public class ItemSlotScript : MonoBehaviour
 
     private void Update()
     {
+        selectedElement = props.selected;
         anim.SetBool("Hovered", isHovered);
         if (isHovered)
         {
             if (Input.GetKeyDown("e"))
-            { 
-                //sthHappens
+            {
+                selectedElement.GetComponent<GridElement>().holder = crop;
             }
         }
     }

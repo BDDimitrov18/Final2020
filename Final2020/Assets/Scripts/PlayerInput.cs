@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    private float x, y; 
+    public float x, y; 
     public float Speed = 3f;
     public PlayerMovement mov;
     public string facing;

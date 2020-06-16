@@ -16,8 +16,5 @@ public class GridElement : MonoBehaviour
         }
     }
 
-    void OnDisSpawnElement(GameObject obj)
-    {
-        Destroy(obj);
-    }
+    
 }
