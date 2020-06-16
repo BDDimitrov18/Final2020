@@ -63,7 +63,10 @@ public class PlayerInput : MonoBehaviour
         }
 
         scroll = Input.GetAxis("Mouse ScrollWheel");
-        Camera.main.orthographicSize -= scroll*5;
+        if (Camera.main.orthographicSize - scroll * 5 < 10 && Camera.main.orthographicSize - scroll * 5 > 1)
+        {
+            Camera.main.orthographicSize -= scroll * 5;
+        }
     }
 
     private void FixedUpdate()

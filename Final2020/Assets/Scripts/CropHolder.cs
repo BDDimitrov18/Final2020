@@ -10,6 +10,8 @@ public class CropHolder : MonoBehaviour
     public int growthState;
     public float growthTime;
     public bool done = false;
+    public float price;
+    public int count;
     SpriteRenderer rend;
     private void Start()
     {

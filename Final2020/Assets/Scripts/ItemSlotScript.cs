@@ -12,6 +12,7 @@ public class ItemSlotScript : MonoBehaviour
     public GameObject selectedElement;
     public SelectorProperties props;
 
+
     private void Start()
     {
         anim = gameObject.GetComponent<Animator>();

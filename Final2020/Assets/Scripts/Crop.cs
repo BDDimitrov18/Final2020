@@ -10,6 +10,11 @@ public class Crop : ScriptableObject
     public int growthState;
     public float growthTime;
     public bool done = false;
-    public float price = Random.Range(100,300);
+    public float price;
     public int count;
+
+    private void Awake()
+    {
+        price = Random.Range(100, 300);
+    }
 }
