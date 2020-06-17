@@ -9,10 +9,12 @@ public class GirdManager : MonoBehaviour
     public int rows =10;
     public int cols = 10;
     public GameObject refTile;
+
     public float tileSize = 1;
 
     private void Start()
     {
+        
         GenerateGrid();
     }
 
@@ -22,7 +24,8 @@ public class GirdManager : MonoBehaviour
         {
             for (int col = 0; col < cols; col++)
             {
-                GameObject tile = (GameObject)Instantiate(refTile,transform);
+                GameObject tile = (GameObject)Instantiate(refTile, transform);
+                
                 float posX = col * tileSize;
                 float posY = row * -tileSize;
 

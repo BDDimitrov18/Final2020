@@ -28,16 +28,16 @@ public class MenuNameTextScript : MonoBehaviour
                 OptionName.text = "Plant Carrot";
                 break;
             case 2:
-                OptionName.text = "WIP";
+                OptionName.text = "Plant Pepper";
                 break;
             case 3:
-                OptionName.text = "WIP";
+                OptionName.text = "Plant Tomato";
                 break;
             case 4:
-                OptionName.text = "WIP";
+                OptionName.text = "Plant Watermelon";
                 break;
             case 5:
-                OptionName.text = "WIP";
+                OptionName.text = "Plant Wheat";
                 break;
             case 6:
                 OptionName.text = "WIP";
