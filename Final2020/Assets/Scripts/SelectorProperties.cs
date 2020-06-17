@@ -14,18 +14,11 @@ public class SelectorProperties : MonoBehaviour
     {
         if (collision.tag == "Tile")
         {
-            collision.gameObject.GetComponent<SpriteRenderer>().color = Color.black;
             selected = collision.gameObject;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Tile")
-        {
-            collision.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
-        }
-    }
+
 
     private void LateUpdate()
     {
