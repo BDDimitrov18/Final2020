@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class MenuNameTextScript : MonoBehaviour
 {
     public OnHoverUi ui;
-    public SelectorProperties sp;
-    public Text OptionName;
-    public GameObject textBox;
+    public TextMeshProUGUI text;
 
     // Start is called before the first frame update
     void Start()
@@ -22,40 +20,40 @@ public class MenuNameTextScript : MonoBehaviour
         switch (ui.selectedID)
         {
             case 0:
-                OptionName.text = "Close";
+                text.text = "Close";
                 break;
             case 1:
-                OptionName.text = "Plant Carrot";
+                text.text = "Carrot";
                 break;
             case 2:
-                OptionName.text = "Plant Pepper";
+                text.text = "Pepper";
                 break;
             case 3:
-                OptionName.text = "Plant Tomato";
+                text.text = "Tomato";
                 break;
             case 4:
-                OptionName.text = "Plant Watermelon";
+                text.text = "Watermelon";
                 break;
             case 5:
-                OptionName.text = "Plant Wheat";
+                text.text = "Wheat";
                 break;
             case 6:
-                OptionName.text = "WIP";
+                text.text = "WIP";
                 break;
             case 7:
-                OptionName.text = "WIP";
+                text.text = "WIP";
                 break;
             case 8:
-                OptionName.text = "WIP";
+                text.text = "WIP";
                 break;
             case 9:
-                OptionName.text = "WIP";
+                text.text  = "WIP";
                 break;
             case 10:
-                OptionName.text = "WIP";
+                text.text = "WIP";
                 break;
             case 11:
-                OptionName.text = "WIP";
+                text.text = "WIP";
                 break;
         }
     }
