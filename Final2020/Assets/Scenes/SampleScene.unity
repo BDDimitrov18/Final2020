@@ -387,10 +387,10 @@ RectTransform:
   m_Father: {fileID: 808331725}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 24, y: -72}
+  m_SizeDelta: {x: 48, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &185091831
 MonoBehaviour:
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  isActivated: 0
+  isActivated: 1
   isHovered: 0
   ui: {fileID: 808331728}
   holder: {fileID: 230298978}
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovered: 0
-  ui: {fileID: 0}
+  ui: {fileID: 808331728}
   sp: {fileID: 1441720650}
   crop: {fileID: 4745241321889257913, guid: 9add404539b3d7d4e8cb3dd68f9db05f, type: 3}
   selectedElement: {fileID: 0}
@@ -886,7 +886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovered: 0
-  ui: {fileID: 0}
+  ui: {fileID: 808331728}
   sp: {fileID: 1441720650}
   crop: {fileID: 8741759849921256405, guid: a8355ed355c35d64299d17e9c00408ef, type: 3}
   selectedElement: {fileID: 0}
@@ -1460,10 +1460,10 @@ RectTransform:
   m_Father: {fileID: 648262194}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 98, y: -40}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &542604218
 MonoBehaviour:
@@ -1478,7 +1478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovered: 0
-  ui: {fileID: 648262195}
+  ui: {fileID: 808331728}
   sp: {fileID: 1441720650}
   crop: {fileID: 0}
   selectedElement: {fileID: 0}
@@ -1969,7 +1969,6 @@ GameObject:
   - component: {fileID: 648262198}
   - component: {fileID: 648262197}
   - component: {fileID: 648262196}
-  - component: {fileID: 648262195}
   m_Layer: 5
   m_Name: Animals
   m_TagString: ItemsHolder
@@ -1998,23 +1997,6 @@ RectTransform:
   m_AnchoredPosition: {x: 123.54793, y: -95.64056}
   m_SizeDelta: {x: 148.78421, y: 197.27856}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &648262195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 648262193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b2100e4d9c32ca4eb3a3d6586b9d094, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectorScript: {fileID: 1441720650}
-  tabs: []
-  selectables: []
-  selectedID: 0
-  currentTab: 0
 --- !u!114 &648262196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2203,7 +2185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovered: 0
-  ui: {fileID: 0}
+  ui: {fileID: 808331728}
   sp: {fileID: 1441720650}
   crop: {fileID: 0}
   selectedElement: {fileID: 0}
@@ -2281,7 +2263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &716256425
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2439,10 +2421,10 @@ RectTransform:
   m_Father: {fileID: 648262194}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 40, y: -40}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &904194508
 MonoBehaviour:
@@ -2457,7 +2439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovered: 0
-  ui: {fileID: 648262195}
+  ui: {fileID: 808331728}
   sp: {fileID: 1441720650}
   crop: {fileID: 0}
   selectedElement: {fileID: 0}
@@ -3066,10 +3048,10 @@ RectTransform:
   m_Father: {fileID: 808331725}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 24, y: -24}
+  m_SizeDelta: {x: 48, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1248073667
 MonoBehaviour:
@@ -3084,7 +3066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  isActivated: 1
+  isActivated: 0
   isHovered: 0
   ui: {fileID: 808331728}
   holder: {fileID: 648262193}
@@ -3651,7 +3633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovered: 0
-  ui: {fileID: 0}
+  ui: {fileID: 808331728}
   sp: {fileID: 1441720650}
   crop: {fileID: 1099846983739914354, guid: dcd4e6fe996364a4f9d05288be4b9aac, type: 3}
   selectedElement: {fileID: 0}
@@ -3955,7 +3937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1485659556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4997,7 +4979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovered: 0
-  ui: {fileID: 0}
+  ui: {fileID: 808331728}
   sp: {fileID: 1441720650}
   crop: {fileID: 4596201930086803010, guid: b1d28551afaaf3a4ba237c4de9923be9, type: 3}
   selectedElement: {fileID: 0}
@@ -5268,7 +5250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovered: 0
-  ui: {fileID: 0}
+  ui: {fileID: 808331728}
   sp: {fileID: 1441720650}
   crop: {fileID: 9119858037220815867, guid: 4148899b9d6962e489633e953d0c44d7, type: 3}
   selectedElement: {fileID: 0}
