@@ -11,7 +11,7 @@ public class ItemSlotScript : MonoBehaviour
     public GameObject crop;
     public GameObject selectedElement;
     public SelectorProperties props;
-
+    public bool isTab;
 
     private void Start()
     {

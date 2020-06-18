@@ -8,14 +8,20 @@ public class OnHoverUi : MonoBehaviour
     public List<GameObject> itemSlots;
     public int selectedID=0;
     int lastSelectedId =0;
-
+    int countSlots = 0;
     private void Start()
     {
         foreach (Transform child in transform)
         {
-            if (child.gameObject.tag == "ItemSlot")
+            if (child.gameObject.tag == "Tab")
             {
-                itemSlots.Add(child.gameObject);
+                foreach(Transform kid in child.gameObject.transform)
+                {
+                    if (kid.tag == "ItemSlot" && kid.gameObject.active)
+                    { 
+                        
+                    }
+                }
             }
         }
     }

@@ -7,6 +7,7 @@ TagManager:
   - Tile
   - Selector
   - ItemSlot
+  - Tab
   layers:
   - Default
   - TransparentFX
