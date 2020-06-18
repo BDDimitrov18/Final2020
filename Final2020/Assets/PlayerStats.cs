@@ -11,6 +11,7 @@ public class PlayerStats : MonoBehaviour
     public long watermelon;
     public long pepper;
     public long tomato;
+    public GameObject inHand;
 
     public TextMeshProUGUI coinstxt;
     public TextMeshProUGUI carrotsTxt;

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Economy : MonoBehaviour
 {
-    public float playerMoney;
+
+    public PlayerStats stats;
     public Crop crop;
     void Start()
     {
-        playerMoney = 1000;
+        stats.coin = 1000;
     }
 
     void Update()
@@ -18,13 +19,13 @@ public class Economy : MonoBehaviour
 
     void SellCrop()
     {
-        playerMoney += crop.price;
-        crop.price = (float)(crop.price/0.2);
+        stats.coin += crop.price;
+        crop.price = ((long)(crop.price/0.2));
     }
 
     void BuyCrop()
     {
-        playerMoney -= crop.price;
-        crop.price = (float)(crop.price * 0.2);
+        stats.coin -= crop.price;
+        crop.price = (long)(crop.price * 0.2);
     }
 }

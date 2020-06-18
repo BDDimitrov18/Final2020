@@ -32,7 +32,7 @@ public class CropHolder : MonoBehaviour
         rend.sprite = tex[growthState];
         if (growthState == tex.Length-1)
         {
-            done = false;
+            done = true;
         }
     }
 }
