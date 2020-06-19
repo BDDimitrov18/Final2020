@@ -47,10 +47,7 @@ public class PlayerInput : MonoBehaviour
                 animator.SetFloat("vertical", -1);
                 animator.SetFloat("horizontal", 0);
             }
-            if (Input.GetKeyDown("down") || Input.GetKeyDown("left") || Input.GetKeyDown("right") || Input.GetKeyDown("up"))
-                animator.SetFloat("speed", floatSpeed++);
-            else
-                animator.SetFloat("speed", -1);
+            
 
             if (facing == "right")
             {
@@ -87,6 +84,10 @@ public class PlayerInput : MonoBehaviour
     private void FixedUpdate()
     {
         mov.Move(x, y);
+        if (Input.GetKey("down") || Input.GetKey("left") || Input.GetKey("right") || Input.GetKey("up"))
+            animator.SetBool("isMoving", true);
+        else
+            animator.SetBool("isMoving", false);
     }
 
     
