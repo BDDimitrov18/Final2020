@@ -2716,7 +2716,7 @@ Transform:
   m_GameObject: {fileID: 1030526687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 519420032}
   m_Father: {fileID: 0}
@@ -2735,11 +2735,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: 0
-  carrot: 1
-  wheat: 1
-  watermelon: 1
-  pepper: 1
-  tomato: 1
+  carrot: 69
+  wheat: 69
+  watermelon: 69
+  pepper: 69
+  tomato: 69
   inHand: {fileID: 0}
   coinstxt: {fileID: 1589450197}
   carrotsTxt: {fileID: 1327309824}
