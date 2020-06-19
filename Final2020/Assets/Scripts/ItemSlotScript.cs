@@ -12,6 +12,7 @@ public class ItemSlotScript : MonoBehaviour
     public GameObject selectedElement;
     public SelectorProperties props;
     public bool isTab;
+    public Pickable pickable;
 
     private void Start()
     {
@@ -26,9 +27,13 @@ public class ItemSlotScript : MonoBehaviour
         {
             if (Input.GetKeyDown("e"))
             {
-                if(ui.selectedID!=0)
+                if(ui.selectedID!=0 && pickable.hasHoe==false)
                 {
                     selectedElement.GetComponent<GridElement>().holder = crop;
+                }
+                if (pickable.hasHoe)
+                {
+                    
                 }
             }
         }
