@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    public Animator animator;
     public Camera cam;
     public float x, y; 
     public float Speed = 3f;
+    private float floatSpeed = 0;
     public PlayerMovement mov;
     public string facing;
     public GameObject selector;
@@ -24,19 +26,31 @@ public class PlayerInput : MonoBehaviour
             if (Input.GetKeyDown("right"))
             {
                 facing = "right";
+                animator.SetFloat("horizontal", 1);
+                animator.SetFloat("vertical", 0);
             }
             if (Input.GetKeyDown("left"))
             {
                 facing = "left";
+                animator.SetFloat("horizontal",-1);
+                animator.SetFloat("vertical", 0);
             }
             if (Input.GetKeyDown("up"))
             {
                 facing = "up";
+                animator.SetFloat("vertical", 1);
+                animator.SetFloat("horizontal", 0);
             }
             if (Input.GetKeyDown("down"))
             {
                 facing = "down";
+                animator.SetFloat("vertical", -1);
+                animator.SetFloat("horizontal", 0);
             }
+            if (Input.GetKeyDown("down") || Input.GetKeyDown("left") || Input.GetKeyDown("right") || Input.GetKeyDown("up"))
+                animator.SetFloat("speed", floatSpeed++);
+            else
+                animator.SetFloat("speed", -1);
 
             if (facing == "right")
             {
@@ -67,6 +81,7 @@ public class PlayerInput : MonoBehaviour
         {
             Camera.main.orthographicSize -= scroll * 5;
         }
+        
     }
 
     private void FixedUpdate()
