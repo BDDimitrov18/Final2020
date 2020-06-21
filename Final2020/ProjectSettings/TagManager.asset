@@ -8,6 +8,7 @@ TagManager:
   - Selector
   - ItemSlot
   - Tab
+  - ItemsHolder
   layers:
   - Default
   - TransparentFX
