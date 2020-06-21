@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public Animator animator;
-    public Camera cam;
     public float x, y; 
     public float Speed = 3f;
     private float floatSpeed = 0;
@@ -15,6 +13,9 @@ public class PlayerInput : MonoBehaviour
     public Vector2 gridPos;
     public bool allowMovement = true;
     public float scroll;
+    public Animator anim;
+
+    public GameObject ToolHolder;
     private void Update()
     {
         if (allowMovement)
@@ -26,45 +27,49 @@ public class PlayerInput : MonoBehaviour
             if (Input.GetKeyDown("right"))
             {
                 facing = "right";
-                animator.SetFloat("horizontal", 1);
-                animator.SetFloat("vertical", 0);
+              
             }
             if (Input.GetKeyDown("left"))
             {
                 facing = "left";
-                animator.SetFloat("horizontal",-1);
-                animator.SetFloat("vertical", 0);
+                
             }
             if (Input.GetKeyDown("up"))
             {
                 facing = "up";
-                animator.SetFloat("vertical", 1);
-                animator.SetFloat("horizontal", 0);
+                
             }
             if (Input.GetKeyDown("down"))
             {
                 facing = "down";
-                animator.SetFloat("vertical", -1);
-                animator.SetFloat("horizontal", 0);
+                
             }
             
 
             if (facing == "right")
             {
                 gridPos.x += 2;
+                anim.SetInteger("Side", 1);
+                gameObject.transform.eulerAngles = new Vector3(0f, 180f, 0f);
             }
             else if (facing == "left")
             {
                 gridPos.x -= 2;
+                anim.SetInteger("Side", 1);
+                gameObject.transform.eulerAngles = new Vector3(0f, 0f, 0f);
             }
             else if (facing == "up")
             {
                 gridPos.y += 2;
+                anim.SetInteger("Side",2);
             }
             else if (facing == "down")
             {
                 gridPos.y -= 2;
+                anim.SetInteger("Side", 0);
             }
+
+
             selector.transform.position = gridPos;
         }
         else
@@ -73,21 +78,31 @@ public class PlayerInput : MonoBehaviour
             y = 0;
         }
 
+
+        if (x != 0 || y != 0)
+        {
+            //sth
+        }
+        else
+        {
+            anim.SetInteger("Side", 4);
+        }
+
+
         scroll = Input.GetAxis("Mouse ScrollWheel");
         if (Camera.main.orthographicSize - scroll * 5 < 10 && Camera.main.orthographicSize - scroll * 5 > 1)
         {
             Camera.main.orthographicSize -= scroll * 5;
         }
+        /*************************************************************************/
         
+
     }
 
     private void FixedUpdate()
     {
         mov.Move(x, y);
-        if (Input.GetKey("down") || Input.GetKey("left") || Input.GetKey("right") || Input.GetKey("up"))
-            animator.SetBool("isMoving", true);
-        else
-            animator.SetBool("isMoving", false);
+      
     }
 
     

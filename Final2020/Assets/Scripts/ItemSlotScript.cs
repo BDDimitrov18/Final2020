@@ -10,10 +10,9 @@ public class ItemSlotScript : MonoBehaviour
     Animator anim;
     public GameObject crop;
     public GameObject selectedElement;
-    public SelectorProperties props;
     public bool isTab;
-    public Pickable pickable;
-
+    //public Pickable pickable;
+    public bool isX;
     private void Start()
     {
         anim = gameObject.GetComponent<Animator>();
@@ -21,20 +20,23 @@ public class ItemSlotScript : MonoBehaviour
 
     private void Update()
     {
-        selectedElement = props.selected;
+        selectedElement = sp.selected;
         anim.SetBool("Hovered", isHovered);
         if (isHovered)
         {
             if (Input.GetKeyDown("e"))
             {
-                if(ui.selectedID!=0 && pickable.hasHoe==false)
+                if(isX && isHovered)
+                {
+                    sp.SelectCropUi.SetActive(false);
+                    sp.openedUi = false;
+                    Debug.Log(sp.SelectCropUi.active);
+                }
+                if(!isX)
                 {
                     selectedElement.GetComponent<GridElement>().holder = crop;
                 }
-                if (pickable.hasHoe)
-                {
-                    
-                }
+               
             }
         }
     }

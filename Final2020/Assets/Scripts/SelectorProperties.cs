@@ -18,21 +18,15 @@ public class SelectorProperties : MonoBehaviour
         }
     }
 
-
-
-    private void LateUpdate()
+    private void Update()
     {
         if (Input.GetKeyDown("e"))
         {
-            if (openedUi)
+            if (!openedUi)
             {
-                openedUi = false;
-                SelectCropUi.SetActive(false);
-                return;
+                SelectCropUi.SetActive(true);
+                openedUi = true;
             }
-            SelectCropUi.SetActive(true);
-            openedUi = true;
-
         }
         if (openedUi)
         {

@@ -15,6 +15,6 @@ public class Crop : ScriptableObject
 
     private void Awake()
     {
-        price = Random.Range(100, 300);
+        price = Random.Range(25, 40);
     }
 }

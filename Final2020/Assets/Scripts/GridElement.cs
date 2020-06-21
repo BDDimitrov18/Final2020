@@ -7,16 +7,22 @@ public class GridElement : MonoBehaviour
     public Vector2 gridPos;
     public GameObject holder;
     public PlayerStats stats;
-    public bool isSpawned;
+    public bool allowSpawn;
+    public bool Soiled = true;
+    public GameObject HolderTo;
     private void Start()
     {
         stats = GameObject.Find("Player").GetComponent<PlayerStats>();
     }
     private void Update()
     {
-        if (holder != null && !isSpawned)
+        if (holder != null && allowSpawn)
         {
-            
+            if (holder.tag == "Soil")
+            {
+                HolderTo = holder;
+                allowSpawn = false;
+            }
             switch(holder.GetComponent<CropHolder>().type)
             {
                 case "carrot":
@@ -25,8 +31,7 @@ public class GridElement : MonoBehaviour
                         return;
                     }
                     stats.carrot--;
-                    isSpawned = true;
-                    Instantiate(holder, transform);
+                    HolderTo = holder;
                     break;
                 case "wheat":
                     if (stats.wheat <= 0)
@@ -34,8 +39,7 @@ public class GridElement : MonoBehaviour
                         return;
                     }
                     stats.wheat--;
-                    isSpawned = true;
-                    Instantiate(holder, transform);
+                    HolderTo = holder;
                     break;
                 case "watermelon":
                     if (stats.watermelon <= 0)
@@ -43,8 +47,7 @@ public class GridElement : MonoBehaviour
                         return;
                     }
                     stats.watermelon--;
-                    isSpawned = true;
-                    Instantiate(holder, transform);
+                    HolderTo = holder;
                     break;
                 case "pepper":
                     if (stats.pepper <= 0)
@@ -52,8 +55,7 @@ public class GridElement : MonoBehaviour
                         return;
                     }
                     stats.pepper--;
-                    isSpawned = true;
-                    Instantiate(holder, transform);
+                    HolderTo = holder;
                     break;
                 case "tomato":
                     if (stats.tomato <= 0)
@@ -61,11 +63,12 @@ public class GridElement : MonoBehaviour
                         return;
                     }
                     stats.tomato--;
-                    isSpawned = true;
-                    Instantiate(holder, transform);
+                    HolderTo = holder;
                     break;
-
+                    allowSpawn = false;
             }
+
+
         }
     }
 

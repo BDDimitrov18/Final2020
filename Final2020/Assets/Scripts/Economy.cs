@@ -6,26 +6,23 @@ public class Economy : MonoBehaviour
 {
 
     public PlayerStats stats;
-    public Crop crop;
+    public Crop carrot;
+    public Crop pepper;
+    public Crop wheat;
+    public Crop tomato;
+    public Crop watermelon;
     void Start()
     {
-        stats.coin = 1000;
+        stats.coin = 100;
     }
 
-    void Update()
+    void SellCrop(Crop crop)
     {
-        
+        crop.price -= Random.Range(2,6);
     }
 
-    void SellCrop()
+    void BuyCrop(Crop crop)
     {
-        stats.coin += crop.price;
-        crop.price = ((long)(crop.price/0.2));
-    }
-
-    void BuyCrop()
-    {
-        stats.coin -= crop.price;
-        crop.price = (long)(crop.price * 0.2);
+        crop.price += Random.Range(2, 6);
     }
 }
