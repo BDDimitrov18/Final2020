@@ -35,8 +35,25 @@ body {
 }
 
 video {
-   
+   background-color:black;
     z-index:0;
+}
+
+.Info-Div{
+
+}
+
+.title{
+    font-family: 'Century Gothic', sans-serif;
+    font-size:50px;
+    font-weight: 100px;
+}
+
+.HRstyle{
+    padding:0px;
+    margin: 0px;
+    border-width:5px;
+    border-color:rgb(56, 56, 56);
 }
 
 .content h1 {
