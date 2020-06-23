@@ -10,18 +10,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <script src="JavaScript/index.js"></script>
 </head>
 
 <body>
     <header>
         <div class="container">
             <div class="row text-center">
-                <div class="col-sm-4 "><a href="#" class="logo"><img src="img/chick.png" alt="logo"></a><i
-                        class="menu-toggle-btn fas fa-bars"></i></div>
+                <div class="col-sm-4 ">
+                    <a href="#" class="logo"><img src="img/chick.png" alt="logo"></a><i class="menu-toggle-btn fas fa-bars"></i></div>
                 <div class="col-sm-2 nav-btn mt-4"><a href="index.html"><i class="fas fa-home home"></i> Home</a></div>
                 <div class="col-sm-2 nav-btn mt-4"> <a href="game-page.html"><i class="fab fa-buffer game"></i> Game</a>
                 </div>
-                <div class="col-sm-2 nav-btn mt-4"><a href="team.html"><i class="fas fa-users team"></i> Team</a></div>
+                <div class="col-sm-2 nav-btn mt-4"><a href="team.html"><i class="fas fa-users team"></i> Team</a>
+                    <button onclick="deleteText()"></button></div>
                 <div class="col-sm-2 nav-btn mt-4"><a href="tutorials.html"><i
                             class="fas fa-headset contact"></i>Tutorials</a></div>
             </div>
@@ -29,6 +31,9 @@
         <div class="content">
             <h1>Welcome</h1>
             <a class="btn" href="#about-game">GET STARTED</a>
+            <button onclick="typeWriter()">Click me</button>
+
+            <p id="demo"></p>
         </div>
     </header>
     <section class="b1">
@@ -42,66 +47,107 @@
         <section id="about-game">
             <div class="container">
                 <div class="row">
-                    <div class="col"><img class="mx-auto d-block" style="margin-bottom:1.5%; width:7%;" src="img/croppedChick.png"></div>
+                    <div class="col"><img class="mx-auto d-block" style="margin-bottom:1.5%; margin-top:1.5%; width:7%;" src="img/croppedChick.png"></div>
                 </div>
                 <div class="row">
-                    <div class="col"><hr class="HRstyle"></div>
+                    <div class="col">
+                        <hr class="HRstyle">
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col"><p class="title text-center">ANIMALS</p></div>
+                    <div class="col">
+                        <p class="title text-center">ANIMALS</p>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col"><hr class="HRstyle"></div>
+                    <div class="col">
+                        <hr class="HRstyle">
+                    </div>
                 </div>
                 <div class="row">
                     <p>
-                        HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file
-                        intended for
-                        display on a World Wide Web browser page. The markup tells the Web browser how to display a Web
-                        page's words
-                        and images for the user. Each individual
-                        markup code is referred to as an element (but many people also refer to it as a tag). Some
-                        elements come in
-                        pairs that indicate when some display effect is to begin and when it is to end.
+                        HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's words and images for the user. Each individual
+                        markup code is referred to as an element (but many people also refer to it as a tag). Some elements come in pairs that indicate when some display effect is to begin and when it is to end.
                     </p>
                 </div>
             </div>
             <div class="parallax"></div>
             <div class="container">
-            <div class="row">
-                <div class="col"><img class="mx-auto d-block" style="width:12%;" src="img/coin.png"></div>
-            </div>
-            <div class="row">
-                <div class="col"><hr class="HRstyle"></div>
-            </div>
-            <div class="row">
-                <div class="col"><p class="title text-center">ECONOMY</p></div>
-            </div>
-            <div class="row">
-                <div class="col"><hr class="HRstyle"></div>
-            </div>
-        
-            <p>
-                HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for
-                display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's
-                words
-                and images for the user. Each individual
-                markup code is referred to as an element (but many people also refer to it as a tag). Some elements come
-                in
-                pairs that indicate when some display effect is to begin and when it is to end.</p>
-            
+                <div class="row">
+                    <div class="col"><img class="mx-auto d-block" style="width:12%;" src="img/coin.png"></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <hr class="HRstyle">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="title text-center">ECONOMY</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <hr class="HRstyle">
+                    </div>
+                </div>
+
+                <p>
+
+                    Our game's economy system ensures the dynamic chanhe of pace in both market buy and sell prices.
+                </p>
+
             </div>
             <div class="parallax-2"></div>
-            <p>
-                HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for
-                display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's
-                words
-                and images for the user. Each individual
-                markup code is referred to as an element (but many people also refer to it as a tag). Some elements come
-                in
-                pairs that indicate when some display effect is to begin and when it is to end.</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col"><img class="mx-auto d-block" style="width:12%; " src="img/hoe.png"></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <hr class="HRstyle">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="title text-center">TOOLS</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <hr class="HRstyle">
+                    </div>
+                </div>
+                <p>
+                    HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's words and images for the user. Each individual
+                    markup code is referred to as an element (but many people also refer to it as a tag). Some elements come in pairs that indicate when some display effect is to begin and when it is to end.</p>
+            </div>
             <div class="parallax-3"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">So, what are you waiting for?</div>
+                </div>
+                <p>
+                    HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's words and images for the user. Each individual
+                    markup code is referred to as an element (but many people also refer to it as a tag). Some elements come in pairs that indicate when some display effect is to begin and when it is to end
+                </p>
+            </div>
+
         </section>
+        <footer>
+            <div class="container">
+                <div class="row ">
+                    <div class="col">
+                        <p id="footerParagraph" class="text-lg-center">Follow us on social media!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col"><img style="width:5%;" src="img/facebook.png"></div>
+                    <p id="text">test</p>
+                </div>
+            </div>
+        </footer>
 </body>
 
 </html>

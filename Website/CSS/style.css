@@ -10,7 +10,7 @@ body {
     width: 100%;
     height: 100%;
     margin: auto;
-    /*background: url(../img/bg.png) no-repeat 50% 50%;*/
+    background: url(../img/bg.png) no-repeat 50% 50%;
     top: 0;
     display: table;
     background-size: cover;
@@ -24,36 +24,32 @@ body {
 }
 
 .content {
-    margin-top:20%;
+    margin-top: 20%;
     position: relative;
     max-width: 500px;
     /*margin: auto;*/
-    margin-right:auto;
-    margin-left:auto;
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
-    z-index:1000;
+    z-index: 1000;
 }
 
 video {
-   background-color:black;
-    z-index:0;
+    background-color: black;
+    z-index: 0;
 }
 
-.Info-Div{
-
-}
-
-.title{
+.title {
     font-family: 'Century Gothic', sans-serif;
-    font-size:50px;
+    font-size: 50px;
     font-weight: 100px;
 }
 
-.HRstyle{
-    padding:0px;
+.HRstyle {
+    padding: 0px;
     margin: 0px;
-    border-width:5px;
-    border-color:rgb(56, 56, 56);
+    border-width: 5px;
+    border-color: rgb(56, 56, 56);
 }
 
 .content h1 {
@@ -106,8 +102,8 @@ header {
 }
 
 .logo img {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 }
 
 .navigation-menu {
@@ -117,45 +113,39 @@ header {
     min-height: 90px;
 }
 
-.nav-btn{
-
-}
-
-.parallax{
+.parallax {
     background: url('../img/imgk.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    height: 500px;
+    height: 700px;
 }
 
-.parallax-2{
+.parallax-2 {
     background: url('../img/img2.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    height: 500px;
+    height: 700px;
 }
 
-.parallax-3{
+.parallax-3 {
     background: url('../img/img3.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    height: 500px;
+    height: 700px;
 }
 
-.nav-btn a{
-    
-    font-size:20px;
-    color:white;
+.nav-btn a {
+    font-size: 20px;
+    color: white;
     text-decoration: none;
     font-family: 'Cairo', sans-serif;
     transition: .3s linear;
 }
 
-.nav-btn a:hover{
+.nav-btn a:hover {
     text-decoration: none;
-    color:rgb(184, 183, 183);
-    font-size:23px; 
-    
+    color: rgb(184, 183, 183);
+    font-size: 23px;
 }
 
 .navigation-menu a {
@@ -207,6 +197,17 @@ header {
     font-size: 26px;
     display: none !important;
     cursor: pointer;
+}
+
+footer {
+    background-color: red;
+    background: #2f3640;
+}
+
+#footerParagraph {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 250%;
+    color: white;
 }
 
 @media screen and (max-width:700px) {
