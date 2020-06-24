@@ -13,27 +13,33 @@
     <script src="JavaScript/index.js"></script>
 </head>
 
-<body>
+<body onload="typeWriter()">
     <header>
         <div class="container">
             <div class="row text-center">
                 <div class="col-sm-4 ">
-                    <a href="#" class="logo"><img src="img/chick.png" alt="logo"></a><i class="menu-toggle-btn fas fa-bars"></i></div>
+                    <a href="#" class="logo"><img src="img/chick.png" alt="logo"></a><i
+                        class="menu-toggle-btn fas fa-bars"></i></div>
                 <div class="col-sm-2 nav-btn mt-4"><a href="index.html"><i class="fas fa-home home"></i> Home</a></div>
                 <div class="col-sm-2 nav-btn mt-4"> <a href="game-page.html"><i class="fab fa-buffer game"></i> Game</a>
                 </div>
                 <div class="col-sm-2 nav-btn mt-4"><a href="team.html"><i class="fas fa-users team"></i> Team</a>
-                    <button onclick="deleteText()"></button></div>
-                <div class="col-sm-2 nav-btn mt-4"><a href="tutorials.html"><i
-                            class="fas fa-headset contact"></i>Tutorials</a></div>
+                </div>
+                <div class="col-sm-2 nav-btn mt-4"><a href="tutorials.html"><i class="fas fa-headset contact"></i>Tutorials</a></div>
+                
             </div>
         </div>
         <div class="content">
-            <h1>Welcome</h1>
-            <a class="btn" href="#about-game">GET STARTED</a>
-            <button onclick="typeWriter()">Click me</button>
-
-            <p id="demo"></p>
+            <h1>Welcome to selo</h1>
+            <h4 id="subWeclome">A game about </h4>
+            <h4 id="demo"></h4>
+            <h4 class="cursor ">&nbsp;</h4>
+            <a class="btn" style="display:block" href="#about-game">GET STARTED</a>
+            <a href="#demo"><svg style="position: fixed;" class="bi bi-arrow-up-circle" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+              </svg></a>
         </div>
     </header>
     <section class="b1">
@@ -47,7 +53,8 @@
         <section id="about-game">
             <div class="container">
                 <div class="row">
-                    <div class="col"><img class="mx-auto d-block" style="margin-bottom:1.5%; margin-top:1.5%; width:7%;" src="img/croppedChick.png"></div>
+                    <div class="col"><img class="mx-auto d-block" style="margin-bottom:1.5%; margin-top:1.5%; width:7%;"
+                            src="img/croppedChick.png"></div>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -66,8 +73,11 @@
                 </div>
                 <div class="row">
                     <p>
-                        HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's words and images for the user. Each individual
-                        markup code is referred to as an element (but many people also refer to it as a tag). Some elements come in pairs that indicate when some display effect is to begin and when it is to end.
+                        HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file
+                        intended for display on a World Wide Web browser page. The markup tells the Web browser how to
+                        display a Web page's words and images for the user. Each individual
+                        markup code is referred to as an element (but many people also refer to it as a tag). Some
+                        elements come in pairs that indicate when some display effect is to begin and when it is to end.
                     </p>
                 </div>
             </div>
@@ -119,19 +129,23 @@
                     </div>
                 </div>
                 <p>
-                    HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's words and images for the user. Each individual
-                    markup code is referred to as an element (but many people also refer to it as a tag). Some elements come in pairs that indicate when some display effect is to begin and when it is to end.</p>
+                    HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended
+                    for display on a World Wide Web browser page. The markup tells the Web browser how to display a Web
+                    page's words and images for the user. Each individual
+                    markup code is referred to as an element (but many people also refer to it as a tag). Some elements
+                    come in pairs that indicate when some display effect is to begin and when it is to end.</p>
             </div>
             <div class="parallax-3"></div>
 
             <div class="container">
                 <div class="row">
-                    <div class="col">So, what are you waiting for?</div>
+                    <div class="col text-center">
+                        <h1 id="#preFooterTitle">So, what are you waiting for?</h1>
+                    </div>
                 </div>
-                <p>
-                    HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's words and images for the user. Each individual
-                    markup code is referred to as an element (but many people also refer to it as a tag). Some elements come in pairs that indicate when some display effect is to begin and when it is to end
-                </p>
+                <div class="row">
+                    <div class="col">Download the game now!</div>
+                </div>
             </div>
 
         </section>
@@ -142,9 +156,17 @@
                         <p id="footerParagraph" class="text-lg-center">Follow us on social media!</p>
                     </div>
                 </div>
+                <div class="row text-center">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-2"><a href="#about"><img style="width:35%;" src="img/facebook.png"></a></div>
+                    <div class="col-lg-2"><a href="#about"><img style="width:35%; margin-top:8%;" src="img/yt.png"></a>
+                    </div>
+                    <div class="col-lg-2"><a href="#about"><img style="width:35%" src="img/twitter.png"></a></div>
+                    <div class="col-lg-2"><a href="#about"><img style="width:35%" src="img/insta.png"></a></div>
+                    <div class="col-lg-2"></div>
+                </div>
                 <div class="row">
-                    <div class="col"><img style="width:5%;" src="img/facebook.png"></div>
-                    <p id="text">test</p>
+                    <div id="copyright" class="col text-center">Copyright 2020 Selo ©</div>
                 </div>
             </div>
         </footer>
