@@ -4,7 +4,7 @@ var sentences = ["Farming","Money","Economy","Rivalry"];
 var txt = 'Lorem ipsum dummy text blabla. DADADADADADASDAD';
 var sentenceIndex=0;
 var k = txt.length;
-var speed = 250;
+var speed = 100;
 
 function typeWriter() {
 
@@ -32,9 +32,16 @@ async function deleteText() {
     }
 }
 
-/*var btn = $("#toTop");
-btn.hover(()=>{
-    btn.colo
-},()=>{
+function lightMode()
+{
+    $("body").css("background-color","white");
+    $(".HRstyle").css("border-color","rgb(56, 56, 56)");
+    $("body").css("color","black");
+}
 
-});*/
+function darkMode()
+{
+    $("body").css("background-color","#2f3640");
+    $(".HRstyle").css("border-color","white");
+    $("body").css("color","white");
+}
