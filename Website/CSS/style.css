@@ -17,24 +17,24 @@ body {
     background-size: cover;
 }
 
-svg{
-    margin-top:5%;
-    margin-left:-1.35%;
-    color:#202327;
-    transition:linear 0.2s;
+svg {
+    margin-top: 5%;
+    margin-left: -1.35%;
+    color: #202327;
+    transition: linear 0.2s;
 }
 
-svg.a{
-    text-decoration:none;
-    color:#202327;
+svg.a {
+    text-decoration: none;
+    color: #202327;
 }
 
-svg.a:visited{
+svg.a:visited {
     color: #202327
 }
 
-svg:hover{
-    fill:#007bff;
+svg:hover {
+    fill: #007bff;
 }
 
 .b1 .in1 {
@@ -73,8 +73,6 @@ video {
     border-color: rgb(56, 56, 56);
 }
 
-
-
 .content h1 {
     font-family: 'Century Gothic', sans-serif;
     color: #f9f3f4;
@@ -90,11 +88,46 @@ video {
     border: 3px solid;
     padding: 7px 13px;
     font-weight: bold;
-    margin-top:5%;
+    margin-top: 5%;
 }
 
 .content .btn:hover {
     color: #2196f3;
+}
+
+.dwn_btn {
+    background-color: rgb(33, 153, 33);
+    padding: 2.5%;
+    border-radius: 10px;
+    color: white;
+    font-size: 150%;
+}
+
+#playButton {
+    transition: 0.3s;
+    /*background-color: rgb(52, 55, 228);*/
+    background-image: linear-gradient(120deg, #0378c7, #45fc5d);
+}
+
+#playButton:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+    /*background-color: rgb(61, 27, 214);*/
+    /*background-image: linear-gradient(120deg, #45fc5d, #0378c7);*/
+}
+
+#downloadButton {
+    transition: 0.3s;
+}
+
+#downloadButton:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+    background-color: rgb(27, 189, 27);
+}
+
+.dwn_btn a {
+    font-family: 'Century Gothic', sans-serif;
 }
 
 p {
@@ -110,21 +143,21 @@ p {
     font-family: "Open Sans", sans-serif;
 }
 
-#demo{
-    color:red;
-    display:inline;
+#demo {
+    color: red;
+    display: inline;
     font-family: 'Century Gothic', sans-serif;
 }
 
-#subWeclome{
-    color:white;
-    display:inline;
+#subWeclome {
+    color: white;
+    display: inline;
     font-family: 'Century Gothic', sans-serif;
 }
 
 header {
     height: 82px;
-    background: #2f3640;
+    background: rgb(46, 46, 46);
 }
 
 .inner-width {
@@ -235,9 +268,9 @@ header {
     cursor: pointer;
 }
 
-#preFooterTitle{
+#preFooterTitle {
     font-family: 'Century Gothic', sans-serif;
-    margin-top:1%;
+    margin-top: 1%;
 }
 
 footer {
@@ -250,17 +283,17 @@ footer {
     color: white;
 }
 
-#copyright{
+#copyright {
     font-family: 'Century Gothic', sans-serif;
-    font-size:120%;
-    color:white;
-    margin-top:3%;
+    font-size: 120%;
+    color: white;
+    margin-top: 3%;
 }
 
 .cursor {
-    display:inline-block;
-    width:3px;
-    background-color:#ccc;
+    display: inline-block;
+    width: 3px;
+    background-color: #ccc;
     margin-left: 0.1rem;
     animation: blink 1s infinite;
 }
@@ -298,10 +331,22 @@ footer {
     }
 }
 
-@keyframes blink{
-    0% {background-color: #ccc}
-    49% {background-color: #ccc}
-    50% {background-color: transparent}
-    99% {background-color: transparent}
-    100% {background-color: #ccc}
+@keyframes blink {
+    0% {
+        background-color: #ccc;
+    }
+    49% {
+        background-color: #ccc;
+    }
+    50% {
+        background-color: transparent;
+    }
+    99% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: #ccc;
+    }
 }
+
+o
