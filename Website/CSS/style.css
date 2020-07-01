@@ -18,8 +18,9 @@ body {
 }
 
 svg {
-    margin-top: 5%;
-    margin-left: -1.35%;
+    /*margin-top: 5%;
+    margin-left: -1.35%;*/
+    position: absolute;
     color: #202327;
     transition: linear 0.2s;
 }
@@ -101,6 +102,17 @@ video {
     border-radius: 10px;
     color: white;
     font-size: 150%;
+}
+
+#or{
+    margin-top:2.5%;
+    font-family: 'Century Gothic', sans-serif;
+    font-size:150%;
+}
+
+#preFooterText{
+    font-size:150%;
+
 }
 
 #playButton {
@@ -348,5 +360,3 @@ footer {
         background-color: #ccc;
     }
 }
-
-o
