@@ -4,6 +4,7 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 .b1 {
@@ -16,6 +17,27 @@ body {
     background-size: cover;
 }
 
+svg {
+    /*margin-top: 5%;
+    margin-left: -1.35%;*/
+    position: absolute;
+    color: #202327;
+    transition: linear 0.2s;
+}
+
+svg.a {
+    text-decoration: none;
+    color: #202327;
+}
+
+svg.a:visited {
+    color: #202327
+}
+
+svg:hover {
+    fill: #007bff;
+}
+
 .b1 .in1 {
     display: table-cell;
     vertical-align: middle;
@@ -24,9 +46,32 @@ body {
 }
 
 .content {
+    margin-top: 20%;
+    position: relative;
     max-width: 500px;
-    margin: auto;
+    /*margin: auto;*/
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
+    z-index: 1000;
+}
+
+video {
+    background-color: black;
+    z-index: 0;
+}
+
+.title {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 50px;
+    font-weight: 100px;
+}
+
+.HRstyle {
+    padding: 0px;
+    margin: 0px;
+    border-width: 5px;
+    border-color: rgb(56, 56, 56);
 }
 
 .content h1 {
@@ -44,10 +89,57 @@ body {
     border: 3px solid;
     padding: 7px 13px;
     font-weight: bold;
+    margin-top: 5%;
 }
 
 .content .btn:hover {
     color: #2196f3;
+}
+
+.dwn_btn {
+    background-color: rgb(33, 153, 33);
+    padding: 2.5%;
+    border-radius: 10px;
+    color: white;
+    font-size: 150%;
+}
+
+#or{
+    margin-top:2.5%;
+    font-family: 'Century Gothic', sans-serif;
+    font-size:150%;
+}
+
+#preFooterText{
+    font-size:150%;
+
+}
+
+#playButton {
+    transition: 0.3s;
+    /*background-color: rgb(52, 55, 228);*/
+    background-image: linear-gradient(120deg, #0378c7, #45fc5d);
+}
+
+#playButton:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+    /*background-color: rgb(61, 27, 214);*/
+    /*background-image: linear-gradient(120deg, #45fc5d, #0378c7);*/
+}
+
+#downloadButton {
+    transition: 0.3s;
+}
+
+#downloadButton:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+    background-color: rgb(27, 189, 27);
+}
+
+.dwn_btn a {
+    font-family: 'Century Gothic', sans-serif;
 }
 
 p {
@@ -63,9 +155,21 @@ p {
     font-family: "Open Sans", sans-serif;
 }
 
+#demo {
+    color: red;
+    display: inline;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+#subWeclome {
+    color: white;
+    display: inline;
+    font-family: 'Century Gothic', sans-serif;
+}
+
 header {
-    height: 90px;
-    background: #2f3640;
+    height: 82px;
+    background: rgb(46, 46, 46);
 }
 
 .inner-width {
@@ -76,18 +180,53 @@ header {
 
 .logo {
     float: left;
-    padding: 20px 0;
 }
 
 .logo img {
-    height: 50px;
+    width: 100%;
+    height: 100%;
 }
 
 .navigation-menu {
-    float: right;
+    /*float: right;*/
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     min-height: 90px;
+}
+
+.parallax {
+    background: url('../img/imgk.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 700px;
+}
+
+.parallax-2 {
+    background: url('../img/img2.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 700px;
+}
+
+.parallax-3 {
+    background: url('../img/img3.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 700px;
+}
+
+.nav-btn a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Cairo', sans-serif;
+    transition: .3s linear;
+}
+
+.nav-btn a:hover {
+    text-decoration: none;
+    color: rgb(184, 183, 183);
+    font-size: 23px;
 }
 
 .navigation-menu a {
@@ -103,7 +242,7 @@ header {
 .navigation-menu a:hover {
     background: #fff;
     color: #2f3640;
-    transform: scale(1.1);
+    /*transform: scale(1.1);*/
 }
 
 .navigation-menu i {
@@ -141,6 +280,36 @@ header {
     cursor: pointer;
 }
 
+#preFooterTitle {
+    font-family: 'Century Gothic', sans-serif;
+    margin-top: 1%;
+}
+
+footer {
+    background: #2f3640;
+}
+
+#footerParagraph {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 250%;
+    color: white;
+}
+
+#copyright {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 120%;
+    color: white;
+    margin-top: 3%;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    animation: blink 1s infinite;
+}
+
 @media screen and (max-width:700px) {
     .menu-toggle-btn {
         display: block !important;
@@ -171,5 +340,23 @@ header {
     }
     .navigation-menu.active {
         display: block;
+    }
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ccc;
+    }
+    49% {
+        background-color: #ccc;
+    }
+    50% {
+        background-color: transparent;
+    }
+    99% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: #ccc;
     }
 }
