@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-    <title>Motikarite | Home</title>
+    <title>Vitika | Home</title>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js%22%3E"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -16,49 +16,46 @@
 <body onload="typeWriter()">
 
     <header>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row text-center">
-                <div class="col-sm-4 ">
-                    <a href="#" class="logo"><img src="img/chick.png" alt="logo"></a><i class="menu-toggle-btn fas fa-bars"></i></div>
+                <div class="col-sm-6 ">
+                    <a href="#" class="logo"><img src="img/chick.png" alt="logo"></a><i
+                        class="menu-toggle-btn fas fa-bars"></i></div>
                 <div class="col-sm-2 nav-btn mt-4"><a href="index.html"><i class="fas fa-home home"></i> Home</a></div>
-                <div class="col-sm-2 nav-btn mt-4"> <a href="game-page.html"><i class="fab fa-buffer game"></i> Game</a>
+                <div class="col-sm-2 nav-btn mt-4"> <a href="#about-game"><i class="fab fa-buffer game"></i>Tutorial</a>
                 </div>
-                <div class="col-sm-2 nav-btn mt-4"><a href="team.html"><i class="fas fa-users team"></i> Team</a>
+                <div class="col-sm-2 nav-btn mt-4"><a href="#playButton"><i class="fas fa-users team"></i> Game</a>
                 </div>
-                <div class="col-sm-2 nav-btn mt-4"><a href="tutorials.html"><i
-                            class="fas fa-headset contact"></i>Tutorials</a></div>
-                <button onclick="darkMode()">clikc</button>
-                <button onclick="lightMode()">clikc</button>
+
             </div>
-        </div>
-        <div class="content">
-            <h1>Welcome to selo</h1>
-            <h4 id="subWeclome">A game about </h4>
-            <h4 id="demo"></h4>
-            <h4 class="cursor ">&nbsp;</h4>
-            <a class="btn" style="display:block" href="#about-game">GET STARTED</a>
-            <a href="#demo"><svg style="position: fixed;" class="bi bi-arrow-up-circle" width="3em" height="3em"
-                    viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                    <path fill-rule="evenodd"
-                        d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z" />
-                    <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z" />
-                </svg></a>
+
+            <button class="dlMode dlMode1" onclick="darkMode()" style="margin-left:2%; z-index:1;">Dark
+                Mode</button>
+            <button class="dlMode dlMode2" onclick="lightMode()" style="margin-left:2%; z-index:1;">Light
+                Mode</button>
+            <div class="content">
+
+                <h1>Welcome to Vitika</h1>
+                <h4 id="subWeclome">A game about </h4>
+                <h4 id="demo"></h4>
+                <h4 class="cursor ">&nbsp;</h4>
+                <a class="btn" style="display:block" href="#about-game">GET STARTED</a>
+            </div>
+
         </div>
     </header>
     <section class="b1">
-        <div class="in1">
-            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                <source src="img/test.mp4" type="video/mp4">
-            </video>
-        </div>
+        <div style="position:absolute;"><img id="bgImg" src="img/Tbg.png"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="img/Video.mp4" type="video/mp4">
+        </video>
     </section>
     <section>
         <section id="about-game">
             <div class="container">
                 <div class="row">
-                    <div class="col"><img class="mx-auto d-block" style="margin-bottom:1.5%; margin-top:1.5%; width:7%;" src="img/croppedChick.png"></div>
+                    <div class="col"><img class="mx-auto d-block" style="margin-bottom:1.5%; margin-top:1.5%; width:7%;"
+                            src="img/wasd.png"></div>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -67,7 +64,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <p class="title text-center">ANIMALS</p>
+                        <p id="controls" class="title text-center">CONTROLS</p>
                     </div>
                 </div>
                 <div class="row">
@@ -77,8 +74,16 @@
                 </div>
                 <div class="row">
                     <p>
-                        HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's words and images for the user. Each individual
-                        markup code is referred to as an element (but many people also refer to it as a tag). Some elements come in pairs that indicate when some display effect is to begin and when it is to end.
+                        Vitika's movement is quite simple! Just use W, A, S and D to move forwards, sideways and
+                        backwards. You will also notice that there is a colored square
+                        in front of your character at all times. This square represents the tile, which is currently
+                        selected. To interact with the environment, such as the shop, tools,
+                        crops and tiles, use the E key.
+                    </p>
+                    <p>
+                        Pressing the E key on a tile or the shop opens Vitika's UI. To navigate the UI you have to make
+                        use of the arrow keys, and to select a certain item once again use the E key.
+                        You can exit the menus via the X button.
                     </p>
                 </div>
             </div>
@@ -105,7 +110,11 @@
 
                 <p>
 
-                    Our game's economy system ensures the dynamic chanhe of pace in both market buy and sell prices.
+                    Our game's economy system ensures the dynamic change of pace both market buy and sell prices. Each
+                    time you sell a crop you reduce it's price by 5 coins.
+                    Everytime you buy a crop, on the other hand, you increase it's price by 9 coins. Don't worry about
+                    buying or selling a crop too much or too little, because every 60 seconds
+                    the price resets to a new randomly assigned value. Each price is randomly generated.
                 </p>
 
             </div>
@@ -130,8 +139,16 @@
                     </div>
                 </div>
                 <p>
-                    HTML (Hypertext Markup Language) is the set of markup symbols or codes inserted in a file intended for display on a World Wide Web browser page. The markup tells the Web browser how to display a Web page's words and images for the user. Each individual
-                    markup code is referred to as an element (but many people also refer to it as a tag). Some elements come in pairs that indicate when some display effect is to begin and when it is to end.</p>
+                    Vitika makes use of 3 major tools: The hoe, watering can and your hand. You can equip the hoe and
+                    watering can by walking next to them on their pedestals. To
+                    unequip them you can once again walk up to the pedestals and your tools will be automatically taken
+                    off. The "hand" tool is active when no tool is equiped.
+                </p>
+                <p>
+                    The hoe can be used to plow the ground, which allows you to plant and pick up crops. The watering
+                    can is used to water your crops, which is an essential part of the growth stage.
+                    The "hand" tool is used to plant crops.
+                </p>
             </div>
             <div class="parallax-3"></div>
 
@@ -143,13 +160,15 @@
                 </div>
                 <div class="row">
                     <div class="col text-center mb-4">
-                        <span id="preFooterText">Experience the enjoyment of a simple, yet fun and memorable farming game. Bring your competitive mindset and sell your rivals away!</span>
+                        <span id="preFooterText">Experience the enjoyment of a simple, yet fun and memorable farming
+                            game. Bring your competitive mindset and sell your rivals away!</span>
                     </div>
                 </div>
                 <div class="row text-center mb-5">
-                    <div class="col dwn_btn" id="downloadButton"><a>Download the game now!</a></div>
+                    <div class="col dwn_btn footerButton" id="downloadButton"><a>Download the game now!</a></div>
                     <div class="col text.center" id="or">OR</div>
-                    <div class="col dwn_btn" id="playButton"><a>Play Online in the browser</a></div>
+                    <div class="col dwn_btn footerButton" id="playButton"><a href="game-page.html">Play Online in the
+                            browser</a></div>
                 </div>
             </div>
 
@@ -158,24 +177,24 @@
             <div class="container">
                 <div class="row ">
                     <div class="col">
-                        <p id="footerParagraph" class="text-lg-center">Follow us on social media!</p>
+                        <p id="footerParagraph" class="text-sm-center">Follow us on social media!</p>
                     </div>
                 </div>
                 <div class="row text-center">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-2">
-                        <a href="#about"><img style="width:35%;" src="img/facebook.png"></a>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-2">
+                        <a href="#about"><img class="footerImages"  src="img/facebook.png"></a>
                     </div>
-                    <div class="col-lg-2">
-                        <a href="#about"><img style="width:35%; margin-top:8%;" src="img/yt.png"></a>
+                    <div class="col-sm-2">
+                        <a href="#about"><img class="footerImages"style="margin-top:8%;" src="img/yt.png"></a>
                     </div>
-                    <div class="col-lg-2">
-                        <a href="#about"><img style="width:35%" src="img/twitter.png"></a>
+                    <div class="col-sm-2">
+                        <a href="#about"><img class="footerImages" src="img/twitter.png"></a>
                     </div>
-                    <div class="col-lg-2">
-                        <a href="#about"><img style="width:35%" src="img/insta.png"></a>
+                    <div class="col-sm-2">
+                        <a href="#about"><img class="footerImages" src="img/insta.png"></a>
                     </div>
-                    <div class="col-lg-2"></div>
+                    <div class="col-sm-2"></div>
                 </div>
                 <div class="row">
                     <div id="copyright" class="col text-center">Copyright 2020 Selo ©</div>
